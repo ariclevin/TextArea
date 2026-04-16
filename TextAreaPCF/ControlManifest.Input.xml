@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="MDT" constructor="TextAreaPCF" version="0.0.2" display-name-key="TextAreaPCF" description-key="TextAreaPCF description" control-type="virtual" >
+    <external-service-usage enabled="false">
+    </external-service-usage>
+    <type-group name="TextValueTypes">
+      <type>SingleLine.Text</type>
+      <type>Multiple</type>
+    </type-group>
+    <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
+    <property name="TextArea" display-name-key="Text Area Value" description-key="Bound text value" of-type-group="TextValueTypes" usage="bound" required="true" />
+    <property name="Title" display-name-key="Title" description-key="Question title shown above the textbox" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="HelpText" display-name-key="Help Text" description-key="Helper text shown below the title" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="TooltipText" display-name-key="Tooltip Text" description-key="Tooltip shown when hovering the info icon" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="MaxLength" display-name-key="Max Length" description-key="Maximum number of allowed characters" of-type="Whole.None" usage="input" required="false" />
+    <resources>
+      <code path="index.ts" order="1"/>
+      <platform-library name="React" version="16.14.0" />
+      <platform-library name="Fluent" version="9.46.2" />
+    </resources>
+  </control>
+</manifest>
