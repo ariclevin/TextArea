@@ -11,6 +11,8 @@ This project contains a **React virtual PCF field control** that provides a styl
 - Supports text wrapping (no horizontal scrollbar) and vertical-only resizing.
 - Honors disabled state from control context (`isControlDisabled`).
 
+<img width="653" height="274" alt="image" src="https://github.com/user-attachments/assets/28b575cc-f760-421a-ace6-024f9d981115" />
+
 ## Supported Bound Field Types
 
 The bound `TextArea` property is restricted to:
@@ -24,6 +26,9 @@ The bound `TextArea` property is restricted to:
 - `HelpText`: Supporting help text shown under the title.
 - `TooltipText`: Tooltip shown when hovering the title info icon.
 - `MaxLength`: Maximum character count used by the input and counter UI.
+
+<img width="243" height="467" alt="image" src="https://github.com/user-attachments/assets/16d13eb4-f5da-4e1c-9a4c-02a62c188b3e" />
+
 
 ## Notes
 
