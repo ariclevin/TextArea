@@ -34,6 +34,7 @@ export class TextArea extends React.Component<ITextAreaProps, ITextAreaState> {
 
   public render(): React.ReactNode {
     const currentLength = this.state.draftValue.length;
+    const hasReachedMaxLength = currentLength >= this.props.maxLength;
     const showRequiredError = this.props.isRequired && currentLength === 0;
     const progressPercent = Math.max(0, Math.min(100, (currentLength / this.props.maxLength) * 100));
 
@@ -168,7 +169,7 @@ export class TextArea extends React.Component<ITextAreaProps, ITextAreaState> {
               }}
             />
           </div>
-          <span>
+          <span style={{ color: hasReachedMaxLength ? "#a80000" : "#605e5c" }}>
             {currentLength} / {this.props.maxLength} Characters
           </span>
         </div>

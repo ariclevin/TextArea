@@ -81,14 +81,10 @@ export class TextAreaPCF implements ComponentFramework.ReactControl<IInputs, IOu
      */
     public updateView(context: ComponentFramework.Context<IInputs>): React.ReactElement {
         const boundValue = context.parameters.TextArea.raw ?? "";
-        const updatedProperties = context.updatedProperties ?? [];
 
         if (this.pendingValue === null) {
             this.currentValue = boundValue;
         } else if (boundValue === this.pendingValue) {
-            this.currentValue = boundValue;
-            this.pendingValue = null;
-        } else if (updatedProperties.includes("TextArea")) {
             this.currentValue = boundValue;
             this.pendingValue = null;
         }
